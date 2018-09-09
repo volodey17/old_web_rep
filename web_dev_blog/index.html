@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Шапка (символика,логотип) -->
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="img/LOGO.png" alt="logo">
             </div>
             <input type="checkbox" name="" id="menu-checkbox">
+            <!-- Навигация -->
             <nav role="navigation">
                 <label for="menu-checkbox" class="toggle-button"
-                data-open="Menu" data-close="Close" onclick></label> <!-- собственные атрибуты -->
+                data-open="MENU" data-close="CLOSE" onclick></label> <!-- собственные атрибуты -->
                 <ul class="main-menu">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">PORTFOLIO</a></li>
@@ -30,6 +32,47 @@
     </header>
 
 
+
+
+
+
+    
+<!-- Основной контент (замена div)-->
+<article>
+        <h1>Привет</h1>
+<!-- Отдельный раздел основного контента (логический контейнер)-->
+        <section>
+            <h1>Заголовок</h1>
+            <p>Некоторый контент</p>
+            <audio src="" controls><source src="" type="">Элемент audio не поддерживается</audio> <!-- autoplay, loop -->
+            <video src="" controls><source src="" type="">Элемент video не поддерживается</video>
+        </section>
+        <section>
+            <progress min="0" max="100" value="70"></progress> <!-- для динамики нужон js --> 
+            <form action="" autocomplete="off">
+                <label for="">Твое имя:</label>
+                <input type="text" name="username" id="user" placeholder="Пафнутий" required autofocus>
+                <input type="submit" value="Submit">
+            </form>
+            <input type="search" name="searchiten" id="mysearch">
+            <input type="text" name="" id="car" list="color"> <!-- list == datalistID -->
+                <datalist id="color">
+                    <option value="red"></option>
+                    <option value="blue"></option>
+                    <option value="black"></option>
+                </datalist>
+        </section>  
+        
+        <aside>Левая чипуха</aside>
+    </article>
+
+<!-- Второстипенный/сопутствующий контент или ссылки -->
+<aside></aside>
+
+<!-- Подвал (контакты, значки соц.,авторское право, карта сайта и т.д.) -->
+    <footer>
+
+    </footer>
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
