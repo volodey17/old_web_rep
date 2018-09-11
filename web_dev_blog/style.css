@@ -12,9 +12,11 @@ li{
 a{
     text-decoration: none;
 }
+
+/*HEADER*/
 header{
     background: #f5f4f6;
-    padding: 22 0;
+    padding: 22px 0; /*отступы (up/down l/r)*/
 }
 .header-container{
     width: 90%;
@@ -40,6 +42,64 @@ ul{
 nav{
     margin-top: 20px;
 }
+
+/*SLIDER*/
+.top-slide{
+    background: url(img/slider_bg.png) no-repeat;
+    padding-top: 120px;
+    padding-bottom: 300px;
+    margin-bottom: 90px;
+}
+.top-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.top-slide h2{
+    background: #ffe72c; 
+    display: inline;
+    font-size: 50px;
+    padding: 0 13px; /*отступы (up/down l/r)*/
+}
+.top-slide :nth-child(2){
+    margin-bottom: 10px;
+}
+.top-slide p{
+    background: #414145; 
+    display: inline;
+    font-size: 24px;
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+/*SPECIALIZE*/
+.specialize-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.specialize-container h3{
+    font-size: 35px;
+}
+.specialize-container p{
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+.first-p{
+    font-size: 20px;
+    color: #ffffff;
+}
+.bottom-card{
+    background: #414145;
+    position: relative; /*Относительное позиционирование*/
+    top: -30px;
+
+}
+.specialize-cards{
+    display: flex;
+    justify-content: space-between; /*flx равно распр. по строке(1&N прижим к краям)*/
+}
+
 /* доделать для 768px */
 @media screen and (max-width: 420px){
     .header-container{
