@@ -27,8 +27,8 @@ header{
 .header-container a{
     color: #000000;
     font-size: 16px;
-    margin-right: 63px; 
-    padding: 27px 6px;
+    margin-right: 60px; 
+    padding: 25px 12px;
 }
 #menu-checkbox{
     display: none;
@@ -46,6 +46,7 @@ nav{
 /*SLIDER*/
 .top-slide{
     background: url(img/slider_bg.png) no-repeat;
+    /*background-attachment: fixed; классно выглядит */
     padding-top: 120px;
     padding-bottom: 300px;
     margin-bottom: 90px;
@@ -60,7 +61,7 @@ nav{
     font-size: 50px;
     padding: 0 13px; /*отступы (up/down l/r)*/
 }
-.top-slide :nth-child(2){
+.top-slide :nth-child(2){ /*после имя класса " ", иначе неработает*/
     margin-bottom: 10px;
 }
 .top-slide p{
@@ -97,15 +98,16 @@ nav{
 }
 .specialize-cards{
     display: flex;
-    justify-content: space-between; /*flx равно распр. по строке(1&N прижим к краям)*/
+    justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
 }
 
-/* доделать для 768px */
+/* доделать для 768px 
+убрать mirgin-righ=63px*/
 @media screen and (max-width: 420px){
     .header-container{
-        width: 100%;
+        width: 90%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between; /*evenly- мжду 2мя-поровну и также по краям*/
     }
     .main-menu{
         display: none;
@@ -117,13 +119,13 @@ nav{
     }
     .main-menu a{
        display: block;
-       padding: 5px; /* между nav кнопками */
+       padding: 10px; /* между nav кнопками */
     }
     .toggle-button{
         text-align: center;
         display: block;
         cursor: pointer;
-        color: #0000a0;
+        color: #000000;
         margin-top: 20px;
     }
     .toggle-button:after{ /* БЕЗ ПРОБЕЛОВ ОКОЛО ":"-иначе не работает!!*/
