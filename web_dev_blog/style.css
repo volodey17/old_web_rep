@@ -94,7 +94,7 @@ nav{
     background: #414145;
     position: relative; /*Относительное позиционирование*/
     top: -30px;
-
+    height: 80px;
 }
 .specialize-cards{
     display: flex;
@@ -139,9 +139,17 @@ nav{
     margin: 0 auto;
     grid-template-columns: auto auto auto auto;
 }
-body{
-    height: 4000px;
+.posts img{
+    width: 100%;
+    max-width: 250px;
 }
+
+/* убираем рывки скролла во время анимации через jQuery */
+body{
+    height: 2500px; 
+}
+
+
 /* доделать для 768px 
 убрать mirgin-righ=63px*/
 @media screen and (max-width: 420px){
