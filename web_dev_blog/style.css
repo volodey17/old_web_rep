@@ -49,7 +49,6 @@ nav{
     /*background-attachment: fixed; классно выглядит */
     padding-top: 120px;
     padding-bottom: 300px;
-    margin-bottom: 90px;
 }
 .top-container{
     width: 80%;
@@ -74,7 +73,7 @@ nav{
 
 /*SPECIALIZE*/
 .specialize-container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
@@ -89,21 +88,23 @@ nav{
 .first-p{
     font-size: 20px;
     color: #ffffff;
+    height: 80px;
 }
 .bottom-card{
     background: #414145;
     position: relative; /*Относительное позиционирование*/
     top: -30px;
-    height: 80px;
+    width: 250px;
+    margin: 0 auto; /*ДОБАВИТЬ в основное*/
 }
 .specialize-cards{
     display: flex;
     justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
+
 }
 
 /*PORTFOLIO*/
 .portfolio{
-    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
@@ -134,14 +135,15 @@ nav{
 }
 
 .posts{
-    width: 90%;
     display: grid;
     margin: 0 auto;
     grid-template-columns: auto auto auto auto;
 }
 .posts img{
-    width: 100%;
+    width: 90%;
     max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 /* убираем рывки скролла во время анимации через jQuery */
@@ -194,5 +196,34 @@ body{
         position: relative;
         top: 20px;
         right: 100px;
+    }
+
+    /*АДАПТИВ!*/
+    .top-slide {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .top-slide h2{
+        font-size: 32px;
+
+    }
+    .top-slide p {
+        font-size: 16px;
+    }
+    .specialize-container p {
+        font-size: 16px;
+        text-align: center;
+    }
+    .specialize-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
+    }
+    .bottom-card{
+        width: 250px;
+        margin: 0 auto; /*ДОБАВИТЬ в основное*/
+    }
+    .posts{
+        grid-template-columns: auto;
     }
 }
