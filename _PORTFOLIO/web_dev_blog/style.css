@@ -83,24 +83,25 @@ nav{
 .specialize-container p{
     font-size: 24px;
     margin-top: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 .first-p{
     font-size: 20px;
     color: #ffffff;
     height: 80px;
+    display: table-cell; /*текст выровнен по центру(табл) и по вертикали!!Работает с родителем*/
+    vertical-align: middle;
 }
 .bottom-card{
     background: #414145;
     position: relative; /*Относительное позиционирование*/
     top: -30px;
     width: 250px;
-    margin: 0 auto; /*ДОБАВИТЬ в основное*/
+    display: table; /*родительский блок для FIRST-P*/
 }
 .specialize-cards{
     display: flex;
     justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
-
 }
 
 /*PORTFOLIO*/
