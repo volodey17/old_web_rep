@@ -15,3 +15,15 @@ $(function() {
         $('.post').show(500);
     });
 });
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items:6, stagePadding:30
+    });
+  });
+
+if($(window).width() < 420){
+    $(".owl-carousel").owlCarousel({
+        items:3
+    })
+}
