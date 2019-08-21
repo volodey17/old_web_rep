@@ -1,282 +1,176 @@
-body{
-    font-family: 'Poppins', sans-serif;
+html {
+    margin: 0;
+    padding: 0;
 }
-*{
+body {
+    font-family: 'Tillana', cursive; /*serif,sans-serif,monospace,fantasy*/
+    font-size: 18px; /*(1em=16px)xx-small,small, medium, large(R), x-large */
+    background-color: #efefef;
+    padding: 20px;
+    margin: 0;                              
+}
+h1 {
+    font-size: 18pt;
+    color: #20bcd5; /*rgb(255,0,0) or #F00*/
+    text-align: center;/*выравнивание по горизонтали, justify-заполняет*/
+    padding: 20px 0 20px 0;
+    margin: 0 0 10px 0;
+}
+h1 span {
+    border: 3px dashed #20bcd5;
+    padding: 10px;
+}
+p {
     padding: 0;
     margin: 0;
 }
-li{
-    list-style: none;
-    display: flex;
+.img-circle {
+    border: 3px solid white;
+    border-radius: 50%;
 }
-a{
-    text-decoration: none;
-}
-
-/*HEADER*/
-header{
-    background: #f5f4f6;
-    padding: 22px 0; /*отступы (up/down l/r)*/
-}
-.header-container{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-.header-container a{
-    color: #000000;
-    font-size: 16px;
-    margin-right: 60px; 
-    padding: 25px 12px;
-}
-#menu-checkbox{
-    display: none;
-}
-.header-container a:hover{
-    background: #ffe72c;
-}
-ul{
-    display: flex;
-}
-nav{
-    margin-top: 20px;
-}
-
-/*SLIDER*/
-.top-slide{
-    background: url(img/slider_bg.png) no-repeat;
-    /*background-attachment: fixed; классно выглядит */
-    padding-top: 120px;
-    padding-bottom: 300px;
-}
-.top-container{
-    width: 80%;
-    margin: 0 auto;
-}
-.top-slide h2{
-    background: #ffe72c; 
-    display: inline;
-    font-size: 50px;
-    padding: 0 13px; /*отступы (up/down l/r)*/
-}
-.top-slide :nth-child(2){ /*после имя класса " ", иначе неработает*/
-    margin-bottom: 10px;
-}
-.top-slide p{
-    background: #414145; 
-    display: inline;
-    font-size: 24px;
-    padding: 0 5px;
-    color: #ffffff;
-}
-
-/*SPECIALIZE*/
-.specialize-container{
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-}
-.specialize-container h3{
-    font-size: 35px;
-}
-.specialize-container p{
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.first-p{
-    font-size: 20px;
-    color: #ffffff;
-    height: 80px;
-    display: table-cell; /*текст выровнен по центру(табл) и по вертикали!!Работает с родителем*/
-    vertical-align: middle;
-}
-.bottom-card{
-    background: #414145;
-    position: relative; /*Относительное позиционирование*/
-    top: -30px;
-    width: 250px;
-    display: table; /*родительский блок для FIRST-P*/
-}
-.specialize-cards{
-    display: flex;
-    justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
-}
-
-/*PORTFOLIO*/
-.portfolio{
-    margin: 0 auto;
-    text-align: center;
-}
-.portfolio h4{
-    background: #424147;
-    padding: 0 8px;
-    font-size: 18px;
-    display: inline-block;
-    color: #f5e10a;
-    margin-bottom: 30px;  
-}
-.portfolio p{
-    color: #424147;
-    font-size: 16px;
-}
-.toggles button{
-    border: none;
-    color: #424147;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px 5px;
-}
-.toggles button:after{
-    content: ' / ';
-}
-.toggles button:last-child:after{
-    content: '';
-}
-
-.posts{
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: auto auto auto auto;
-}
-.posts img{
-    width: 90%;
-    max-width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-/* убираем рывки скролла во время анимации через jQuery */
-body{
-    height: 2500px; 
-}
-
-/*SLIDER*/
-.brand-slider{
-    margin: 0 auto;
-    text-align: center;
-}
-.brand-slider h4{
-    margin-top: 40px;
-    background: #424147;
-    padding: 0 8px;
-    font-size: 18px;
-    display: inline-block;
-    color: #f5e10a;
-    margin-bottom: 30px;  
-}
-.brand-slider p{
-    color: #424147;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-/*FOOTER*/
-footer{
-    background: #414145;
-    padding: 30px 0;
-    color: #f5f4f6;
-}
-footer h4{
-    font-size: 18px;
-}
-.footer-container{
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40% 30% 20%;
-    grid-column-gap: 3%;
-}
-.about-us a{
-    background: #000;
-    color: #f5f4f6;
-    font-size: 15px;
+.section {
+    background-color: #fff;
     padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #f5e10a;
-    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
-.images{
+#header {
+    /*background-image: url("https://www.sololearn.com/Uploads/header.jpg");
+    background-size: cover;*/
+  
+}
+@keyframes olol{ 
+    from {opacity: 0.6;}
+    to {opacity: 1;}
+}
+#header:hover{
+    background: #085078;
+    background: -moz-linear-gradient(top, #085078 0%, #85D8CE 100%);
+    background: -webkit-linear-gradient(top, #085078 0%, #85D8CE 100%);
+    background: linear-gradient(to bottom, #085078 0%, #85D8CE 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#085078', endColorstr='#85D8CE',GradientType=0 );
+    animation: olol 2s infinite alternate; 
+    -webkit-animation: olol 2s infinite alternate}
+#header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+#header p {
+    font-size: 25pt;
+    color: #3b464c;
+    padding-top: 5px;
+    margin: 0;
+    font-weight: bold;/*(толщина)normal(400),bold(700),bolder,lighter*/
+    text-align: center;
+}
+.quote {
+    font-size: 13pt;
+    text-align: right;
     margin-top: 10px;
 }
-.tweets p{
-    margin-top: 20px;
+table {
+    width: 100%;
 }
-
-/* доделать для 768px 
-убрать mirgin-righ=63px*/
-@media screen and (max-width: 420px){
-    .header-container{
-        width: 90%;
-        display: flex;
-        justify-content: space-between; /*evenly- мжду 2мя-поровну и также по краям*/
-    }
-    .main-menu{
-        display: none;
-    }
-    .main-menu li {
-        width: 100%;
-        display: block;
-        font-size: 12px;
-    }
-    .main-menu a{
-       display: block;
-       padding: 10px; /* между nav кнопками */
-    }
-    .toggle-button{
-        text-align: center;
-        display: block;
-        cursor: pointer;
-        color: #000000;
-        margin-top: 20px;
-    }
-    .toggle-button:after{ /* БЕЗ ПРОБЕЛОВ ОКОЛО ":"-иначе не работает!!*/
-        content: attr(data-open);  
-        display: block;
-    }
-    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
-        display: block;
-    }
-    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
-        content: attr(data-close);
-    }
-    .header-container a{
-        margin-right: -65px;
-    }
-    .main-menu{
-        position: relative;
-        top: 20px;
-        right: 100px;
-    }
-
-    /*АДАПТИВ!*/
-    .top-slide {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .top-slide h2{
-        font-size: 32px;
-
-    }
-    .top-slide p {
-        font-size: 16px;
-    }
-    .specialize-container p {
-        font-size: 16px;
-        text-align: center;
-    }
-    .specialize-cards{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /*ровно по строке - 1&N прижим к краям*/
-    }
-    .bottom-card{
-        width: 250px;
-        margin: 0 auto; /*ДОБАВИТЬ в основное*/
-    }
-    .posts{
-        grid-template-columns: auto;
-    }
+table, th, td {
+    border: 2px solid #cecece;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+.selected {
+    background-color: #f36f48;
+    font-weight: bold;
+    color: white;
+}
+li {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+progress {
+    width: 70%;
+    height: 20px;
+    color: #3fb6b2;
+    background: #efefef;
+}
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: #3fb6b2;
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+iframe, audio {
+    display: block; /*inline-table,table-cell -для работы vertical-align c div's*/
+    margin: 0 auto;
+    border: 3px solid #3fb6b2;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #f36f48;
+}
+form {
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 15px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -25px;
+}
+#contacts img {
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#contacts a {
+    text-decoration: none;
+}
+#contacts img:hover {
+    opacity: 0.8;
+}
+#contacts {
+    text-align: center;
+}
+.copyright {
+    font-size: 8pt;
+    text-align: right;
+    padding-bottom: 10px;
+    color: grey;
 }
