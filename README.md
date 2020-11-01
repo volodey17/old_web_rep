@@ -1,3 +1,22 @@
+# русификация дат
+Для того, чтобы jekyll начал понимать даты на русском языке, достаточно предоставить генератору файл _locales/ru.yml со следующим содержанием.
+
+В директорию _plugins положить файл с фильтром, который будет обрабатывать наши данные:
+
+i18n_filter.rb
+
+В шаблоне же выводить локализованную дату:
+```
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<%# вот таким макаром %>
+{% raw %}{{ page.date | localize: "%d %B %Y" }}{% endraw %} 
+```
+Если имеется необходимость отображать даты на нескольких языках, сто́ит обратиться к плагину jekyll-localization
+
+
 # About this Cool Concise Jekyll Blog Theme
 
 [![GitHub stars](https://img.shields.io/github/stars/Gaohaoyang/gaohaoyang.github.io.svg)](https://github.com/Gaohaoyang/gaohaoyang.github.io/stargazers)
