@@ -2,23 +2,23 @@
 
 /**
  * [fixSidebar description]
- * 滚轮滚到一定位置时，将 sidebar-wrap 添加 fixed 样式
- * 反之，取消样式
+ * Когда колесо катится в определенное положение, добавьте фиксированный стиль к боковой панели.
+ * В противном случае отмените стиль
  */
 (function() {
     if (window.innerWidth > 770) {
 
         var sidebarWrap = document.querySelector('.right>.wrap')
 
-        //fix 之后百分比宽度会失效，这里用js赋予宽度
+        //fix После этого процентная ширина будет недействительной, здесь мы используем js, чтобы указать ширину
         sidebarWrap.style.width = sidebarWrap.offsetWidth + "px"
         window.onscroll = function() {
 
-            // 页面顶部滚进去的距离
+            // Прокрутите вверху страницы
             var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
 
 
-            // 页面底部滚进去的距离
+            // Прокрутите страницу вниз
             var htmlHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight)
                 // console.log(htmlHeight);
             var scrollBottom = htmlHeight - window.innerHeight - scrollTop
@@ -34,13 +34,13 @@
                 sidebarWrap.classList.add('scroll-bottom')
             }
         }
-        setContentMaxHeightInPC() //设置目录最大高度(PC端)
+        setContentMaxHeightInPC() //Установите максимальную высоту каталога (на стороне ПК)
     }
-    moveTOC() //将Content内容转移
+    moveTOC() //Передача контента
 }());
 
 /**
- * 设置目录最大高度
+ * Установите максимальную высоту каталога
  */
 function setContentMaxHeightInPC() {
     var windowHeight = window.innerHeight
@@ -50,7 +50,7 @@ function setContentMaxHeightInPC() {
 }
 
 /**
- * 达到最大高度
+ * Достичь максимальной высоты
  * @return {Boolean} [description]
  */
 function isMaxHeight() {
@@ -66,7 +66,7 @@ function isMaxHeight() {
 
 //-------------mobile--------------
 /**
- * 屏幕宽度小于770px时，点击锚点按钮，弹出目录框
+ * Если ширина экрана меньше 770 пикселей, нажмите кнопку привязки, чтобы открыть окно каталога.
  * @param  {[type]} function( [description]
  * @return {[type]}           [description]
  */
@@ -76,7 +76,7 @@ function isMaxHeight() {
         var rightDiv = document.querySelector('.right')
 
         /**
-         * 监听锚点按钮
+         * Кнопка привязки монитора
          */
         anchorBtn.onclick = function(e) {
             e.stopPropagation()
@@ -84,19 +84,19 @@ function isMaxHeight() {
             anchorBtn.classList.add('anchor-hide')
         }
 
-        //监听body，点击body，隐藏Content
+        //Наблюдать за body, щелкнуть по body, скрыть контент
         document.querySelector('body').addEventListener('click', function() {
             rightDiv.classList.remove('right-show')
             anchorBtn.classList.remove('anchor-hide')
         })
 
-        ancherPostion(anchorBtn, rightDiv) //目录锚的位置固定
-        setContentMaxHeight() //设置目录最大高度
+        ancherPostion(anchorBtn, rightDiv) //Фиксированная позиция привязки каталога
+        setContentMaxHeight() //Установите максимальную высоту каталога
     }
 }());
 
 /**
- * 目录锚的位置固定
+ * Фиксированная позиция привязки каталога
  */
 function ancherPostion(anchorBtn, rightDiv) {
     window.addEventListener('scroll', function() {
@@ -115,7 +115,7 @@ function ancherPostion(anchorBtn, rightDiv) {
 }
 
 /**
- * 设置目录最大高度
+ * Установите максимальную высоту каталога
  */
 function setContentMaxHeight() {
     var windowHeight = window.innerHeight
@@ -125,16 +125,16 @@ function setContentMaxHeight() {
 }
 
 //-------------post Content----------------------
-//将Content内容转移
+//Передача контента
 function moveTOC() {
     if (document.querySelector('#markdown-toc') !== null) {
         var TOCString = document.querySelector('#markdown-toc').innerHTML
         var contentUl = document.querySelector('#content-side')
-        contentUl.insertAdjacentHTML('afterbegin', TOCString) //插入字符串
+        contentUl.insertAdjacentHTML('afterbegin', TOCString) //Вставить строку
 
         // if (!isAndroidWechatBrowser()) {
 
-            //添加scroll样式，为了平滑滚动
+            //Добавить стиль прокрутки для плавной прокрутки
             //add class "scroll", for smooth scroll
             var aTags = document.querySelectorAll('#content-side a')
 
@@ -157,7 +157,7 @@ function moveTOC() {
 }
 
 /**
- * 判断安卓版微信浏览器
+ * Оцените версию браузера WeChat для Android
  * @return {Boolean} [description]
  */
 function isAndroidWechatBrowser() {

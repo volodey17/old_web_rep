@@ -1,53 +1,53 @@
 /* jshint asi:true */
-//先等图片都加载完成
-//再执行布局函数
+// Дождемся загрузки картинок
+// Снова выполняем функцию макета
 
 /**
- * 执行主函数
+ * Выполнить основную функцию
  * @param  {[type]} function( [description]
  * @return {[type]}           [description]
  */
 (function() {
 
   /**
-     * 内容JSON
+     * Контент JSON
      */
   var demoContent = [
     {
       demo_link: 'https://codepen.io/haoyang/pen/jrvrQq',
       img_link: 'https://ooo.0o0.ooo/2016/11/24/5836d81f48cd2.png',
       code_link: 'https://codepen.io/haoyang/pen/jrvrQq',
-      title: 'Fisher-Yates 洗牌算法动画',
+      title: 'Fisher-Yates Анимация алгоритма перемешивания',
       core_tech: 'JavaScript',
-      description: 'Fisher-Yates 洗牌算法动画。算法详情见 <a href ="https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/">这里</a>。'
+      description: 'Fisher-Yates Анимация алгоритма перемешивания. См. Подробности алгоритма <a href ="https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/">Вот</a>。'
     }, {
       demo_link: 'http://gaohaoyang.github.io/test/headerTransition/',
       img_link: 'https://ooo.0o0.ooo/2016/06/20/5768c1597d1fe.png',
       code_link: 'https://github.com/Gaohaoyang/test/tree/master/headerTransition',
-      title: 'Header Transition 渐变动画',
+      title: 'Header Transition Градиентная анимация',
       core_tech: 'jQuery BootStrap CSS3',
-      description: '花费不到半小时帮师兄做了一个简单的 CSS3 动画效果，当页面滚动到指定距离时，header 区的背景色由透明变为蓝色。仿照了网站 <a href ="https://quorrajs.org/">https://quorrajs.org/</a> 的 Header 区动画效果。'
+      description: 'Чтобы помочь брату создать простой эффект анимации CSS3, потребовалось менее получаса. Когда страница прокручивается на заданное расстояние, цвет фона области заголовка изменяется с прозрачного на синий. Имитировал эффект анимации области заголовка веб-сайта <a href ="https://quorrajs.org/"> https://quorrajs.org/"></a>'
     }, {
       demo_link: 'http://gaohaoyang.github.io/mask-fade-out/',
       img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-fade-out.png',
       code_link: 'https://github.com/Gaohaoyang/mask-fade-out',
-      title: '遮罩层按指定路径缩小消失',
+      title: 'Слой маски сжимается и исчезает в соответствии с указанным путем.',
       core_tech: 'jQuery CSS',
-      description: '使用 animate 方法，做到兼容 IE8。曾在联想服务官网上线3个月。'
+      description: 'Используйте метод анимации для совместимости с IE8. Был в сети 3 месяца на официальном сервисном сайте Lenovo.'
     }, {
       demo_link: 'http://gaohaoyang.github.io/ToDo-WebApp/',
       img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/blog-todoWebApp.png',
       code_link: 'https://github.com/Gaohaoyang/ToDo-WebApp',
-      title: '百度前端学院 task0004 ToDo 应用(移动端)',
+      title: 'Приложение Baidu Frontend Academy task0004 ToDo (мобильный терминал)',
       core_tech: 'JavaScript LocalStorage requireJS Sass Gulp XSS',
-      description: '在任务三中，做了一个 PC 端的 ToDo 应用。任务四是将它优化，以适应移动端设备。'
+      description: 'В третьей задаче было создано приложение ToDo на стороне ПК. Четвертая задача - оптимизировать его под мобильные устройства.'
     }, {
       demo_link: 'http://gaohaoyang.github.io/baidu-ife-practice/task0003/',
       img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-todo.png',
       code_link: 'https://github.com/Gaohaoyang/baidu-ife-practice/tree/master/task0003',
-      title: '百度前端学院 task0003 ToDo 应用',
+      title: 'Baidu Frontend Academy task0003 Приложение ToDo',
       core_tech: 'JavaScript LocalStorage',
-      description: '任务三，ToDo 单页应用，主要使用了 LocalStorage 存储数据，使用 JSON 模拟了 3 张数据表。'
+      description: 'Задача третья, одностраничное приложение ToDo, в основном использует LocalStorage для хранения данных и использует JSON для имитации трех таблиц данных.'
     }, {
       demo_link: 'http://gaohaoyang.github.io/ife/task/task0002/work/Gaohaoyang/task0002_5.html',
       img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-drag.png',

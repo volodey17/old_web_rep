@@ -1,8 +1,8 @@
 {% if site.duoshuo_shortname %}
-<!-- 多说评论框 start -->
+<!-- Окно комментариев Talk more start -->
 <div class="ds-thread" data-thread-key="{{ site.url }}{{ page.url }}" data-title="{{page.title}}" data-url="{{ site.url }}{{ page.url }}"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!-- Окно комментариев Talk more end -->
+<!-- Подробнее об общедоступном JS-коде start (Вставить веб-страницу только один раз) -->
 <script type="text/javascript">
     var duoshuoQuery = {
         short_name: "{{site.duoshuo_shortname}}"
@@ -16,7 +16,7 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
+<!-- Подробнее об общедоступном JS-коде end -->
 {% endif %}
 
 {% if site.disqus_shortname %}
@@ -42,5 +42,5 @@
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript" rel="nofollow">комментариев от Disqus.</a></noscript>
 {% endif %}
